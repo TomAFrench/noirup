@@ -150,6 +150,10 @@ main() {
   # --root appends /bin to the directory it is given, so we pass NARGO_DIR.
   RUSTFLAGS="-C target-cpu=native" ensure cargo install --path ./crates/nargo --bins --locked --force --root $NARGO_DIR
 
+  if [[ $(which nargo) =~ "cargo" ]]; then
+    warn "it appears your system has already has forge installed via cargo. you may need to run 'rm $(which nargo)' to allow nargoup to take precedence!"
+  fi
+
   say "done"
   #   fi
 }
