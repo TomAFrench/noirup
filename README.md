@@ -1,5 +1,7 @@
 # `noirup`
 
+> Noirup is now officially supported by the Noir language team and so has migrated to https://github.com/noir-lang/noir/tree/master/noirup
+
 Update or revert to a specific Nargo branch with ease.
 
 ## Installing
